@@ -1,0 +1,5 @@
+@echo off
+for /F "tokens=*" %%A in (urls.txt) do ( 
+   set hostname=%%A
+   curl.exe -Ls -o /dev/null -w %{url_effective} %hostname%
+)
